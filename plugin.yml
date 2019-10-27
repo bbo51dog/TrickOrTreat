@@ -4,3 +4,6 @@ main: bbo51dog\trickortreat\Main
 version: 1.0.0
 description: PMMP plugin for Halloween2019
 author: bbo51dog
+permissions:
+  command.halloween:
+    default: true
