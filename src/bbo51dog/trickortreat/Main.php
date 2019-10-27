@@ -1,6 +1,6 @@
 <?php
 
-namespace bboyyu51\template;
+namespace bboyyu51\trickortreat;
 
 use pocketmine\plugin\PluginBase;
 

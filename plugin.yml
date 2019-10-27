@@ -1,6 +1,6 @@
-name: Template
+name: TrickOrTreat
 api: [3.0.0]
-main: bbo51dog\template\Main
+main: bbo51dog\trickortreat\Main
 version: 1.0.0
-description: Description
+description: PMMP plugin for Halloween2019
 author: bbo51dog
