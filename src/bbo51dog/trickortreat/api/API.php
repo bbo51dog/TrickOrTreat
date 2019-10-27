@@ -1,6 +1,6 @@
 <?php
 
-namespace bbo51dog\trickortreat;
+namespace bbo51dog\trickortreat\api;
 
 interface API{
 
