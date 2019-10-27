@@ -1,6 +1,6 @@
 <?php
 
-namespace bboyyu51\trickortreat;
+namespace bbo51dog\trickortreat;
 
 class APIInstance implements API{
 

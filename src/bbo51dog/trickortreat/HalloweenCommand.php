@@ -5,6 +5,7 @@ namespace bbo51dog\trickortreat;
 use pocketmine\Player;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use bbo51dog\trickortreat\api\API;
 
 class HalloweenCommand extends Command{
 

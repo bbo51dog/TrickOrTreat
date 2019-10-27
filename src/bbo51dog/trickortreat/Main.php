@@ -1,8 +1,10 @@
 <?php
 
-namespace bboyyu51\trickortreat;
+namespace bbo51dog\trickortreat;
 
 use pocketmine\plugin\PluginBase;
+use bbo51dog\trickortreat\api\API;
+use bbo51dog\trickortreat\api\APIInstance;
 
 class Main extends PluginBase{
 
