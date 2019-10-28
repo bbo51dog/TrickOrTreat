@@ -34,6 +34,6 @@ class HalloweenCommand extends Command{
             throw new \Exception('$resultの値が不正です');
         }
         $sender->sendMessage(array_rand($messages));
-        Server::getInstance()->broadcastMessage($broadcast);
+        Server::getInstance()->broadcastMessage(str_replace("%player", $sender->getName(), $broadcast));
     }
 }
