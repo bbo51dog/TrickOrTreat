@@ -2,6 +2,8 @@
 
 namespace bbo51dog\trickortreat\api;
 
+use pocketmine\Player;
+
 class APIInstance implements API{
 
     public function select(): int{
