@@ -2,6 +2,8 @@
 
 namespace bbo51dog\trickortreat\api;
 
+use pocketmine\Player;
+
 interface API{
 
     /** @var int */
@@ -9,7 +11,7 @@ interface API{
     public const TREAT = 1;
 
     public function select(): int;
-    public function trick(): void;
-    public function treat(): void;
-    public function run(): void;
+    public function trick(Player $player): void;
+    public function treat(Player $player): void;
+    public function run(Player $player): void;
 }
