@@ -13,5 +13,5 @@ interface API{
     public function select(): int;
     public function trick(Player $player): void;
     public function treat(Player $player): void;
-    public function run(Player $player): void;
+    public function run(Player $player): int;
 }

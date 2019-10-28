@@ -23,7 +23,7 @@ class APIInstance implements API{
 
     }
 
-    public function run(Player $player): void{
+    public function run(Player $player): int{
         $id = $this->select();
         if($id === static::TRICK){
             $this->trick($player);
@@ -32,5 +32,6 @@ class APIInstance implements API{
         }else{
             throw new \Exception('$idの値が不正です');
         }
+        return $id;
     }
 }

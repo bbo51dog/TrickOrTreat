@@ -23,6 +23,6 @@ class HalloweenCommand extends Command{
             $sender->sendMessage("サーバー内で使用してください");
             return;
         }
-        $this->api->run($sender);
+        $result = $this->api->run($sender);
     }
 }
