@@ -1,8 +1,9 @@
 <?php
 
-namespace bbo51dog\trickortreat\api;
+namespace bbo51dog\trickortreat\api\instance;
 
 use pocketmine\Player;
+use bbo51dog\trickortreat\api\API;
 
 class APIInstance implements API{
 
