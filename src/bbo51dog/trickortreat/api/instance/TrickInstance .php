@@ -29,12 +29,6 @@ class TrickInstance implements Trick{
         $this->effect($player, Effect::NAUSEA);
     }
 
-    public function teleport(Player $player): void{
-        $y = $player->y + rand(10, 20);
-        $pos = new Position($player->x, $y, $player->z, $player->getLevel());
-        $player->teleport($pos);
-    }
-
     private function effect(Player $player, int $id): void{
         $effect = new EffectInstance(Effect::getEffect($id), 300, 1, false);
         $player->addEffect($effect);
