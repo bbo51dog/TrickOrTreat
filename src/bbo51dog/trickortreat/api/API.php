@@ -11,4 +11,5 @@ interface API{
     public function select(): int;
     public function trick(): void;
     public function treat(): void;
+    public function run(): void;
 }
