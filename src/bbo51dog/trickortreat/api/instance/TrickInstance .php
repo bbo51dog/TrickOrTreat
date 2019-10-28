@@ -4,6 +4,7 @@ namespace bbo51dog\trickortreat\api\instance;
 
 use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
+use pocketmine\level\Position;
 use bbo51dog\trickortreat\api\Trick;
 
 class TrickInstance implements Trick{
@@ -26,6 +27,12 @@ class TrickInstance implements Trick{
 
     public function nausea(Player $player): void{
         $this->effect($player, Effect::NAUSEA);
+    }
+
+    public function teleport(Player $player): void{
+        $y = $player->y + rand(10, 20);
+        $pos = new Position($player->x, $y, $player->z, $player->getLevel());
+        $player->teleport($pos);
     }
 
     private function effect(Player $player, int $id): void{
