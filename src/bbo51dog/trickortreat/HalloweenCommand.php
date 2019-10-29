@@ -25,14 +25,20 @@ class HalloweenCommand extends Command{
             return;
         }
         $result = $this->api->run($sender);
-        if($result === API::TRICK){
-            $messages = Message::RESULT_TRICK;
-            $broadcast = Message::RESULT_TRICK_BROADCAST;
-        }elseif($result === API::TREAT){
-            $messages = Message::RESULT_TREAT;
-            $broadcast = Message::RESULT_TREAT_BROADCAST;
-        }else{
-            throw new Exception('$resultの値が不正です');
+        switch($result){
+            case API::TRICK:
+                $messages = Message::RESULT_TRICK;
+                $broadcast = Message::RESULT_TRICK_BROADCAST;
+                break;
+
+            case API::TREAT:
+                $messages = Message::RESULT_TREAT;
+                $broadcast = Message::RESULT_TREAT_BROADCAST;
+                break;
+
+            default:
+                throw new Exception('$resultの値が不正です');
+                break;
         }
         $sender->sendMessage(array_rand($messages));
         Server::getInstance()->broadcastMessage(str_replace("%player", $sender->getName(), $broadcast));
