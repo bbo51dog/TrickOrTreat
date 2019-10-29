@@ -28,6 +28,10 @@ class TrickInstance implements Trick{
     public function nausea(Player $player): void{
         $this->effect($player, Effect::NAUSEA);
     }
+    
+    public function title(Player $player): void{
+        $player->addTitle("§l§k§4aaaaaaaaaaaa", "§6HALLOWEEN!!", 10, 300, 10);
+    }
 
     private function effect(Player $player, int $id): void{
         $effect = new EffectInstance(Effect::getEffect($id), 300, 1, false);

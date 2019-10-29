@@ -10,4 +10,5 @@ interface Trick{
     public function poison(Player $player): void;
     public function slowness(Player $player): void;
     public function nausea(Player $player): void;
+    public function title(Player $player): void;
 }
