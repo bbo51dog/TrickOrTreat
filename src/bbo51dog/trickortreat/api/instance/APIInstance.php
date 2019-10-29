@@ -20,7 +20,7 @@ class APIInstance implements API{
         $this->treat = new TreatInstance();
     }
 
-    public function select(): int{
+    private function select(): int{
         $num = rand(0, 1);
         if($num === 0){
             return static::TRICK;
@@ -31,11 +31,11 @@ class APIInstance implements API{
         }
     }
 
-    public function trick(Player $player): void{
+    private function trick(Player $player): void{
 
     }
 
-    public function treat(Player $player): void{
+    private function treat(Player $player): void{
 
     }
 

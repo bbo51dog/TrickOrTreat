@@ -9,27 +9,27 @@ use bbo51dog\trickortreat\api\Trick;
 
 class TrickInstance implements Trick{
 
-    public function blindness(Player $player): void{
+    private function blindness(Player $player): void{
         $this->effect($player, Effect::BLINDNESS);
     }
 
-    public function hunger(Player $player): void{
+    private function hunger(Player $player): void{
         $this->effect($player, Effect::HUNGER);
     }
 
-    public function poison(Player $player): void{
+    private function poison(Player $player): void{
         $this->effect($player, Effect::POISON);
     }
 
-    public function slowness(Player $player): void{
+    private function slowness(Player $player): void{
         $this->effect($player, Effect::SLOWNESS);
     }
 
-    public function nausea(Player $player): void{
+    private function nausea(Player $player): void{
         $this->effect($player, Effect::NAUSEA);
     }
     
-    public function title(Player $player): void{
+    private function title(Player $player): void{
         $player->addTitle("§l§k§4aaaaaaaaaaaa", "§6HALLOWEEN!!", 10, 300, 10);
     }
 
