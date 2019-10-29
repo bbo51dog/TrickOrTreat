@@ -29,4 +29,13 @@ class TreatInstance implements Treat{
         }
         $this->item = $items;
     }
+
+    public function run(Player $player): void{
+        $item = array_rand($this->item);
+        $inv = $player->getInventory();
+        if(!$inv->canAddItem($item)){
+            throw new \Exception('アイテムを追加できません');
+        }
+        $inv->addItem($item);
+    }
 }
