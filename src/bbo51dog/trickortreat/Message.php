@@ -9,6 +9,7 @@ class Message{
     public const SENDER_NOT_PLAYER = "§cサーバー内で使用してください";
     public const RESULT_TRICK_BROADCAST = Message::PREFIX."%playerさんがイタズラされました！";
     public const RESULT_TREAT_BROADCAST = Message::PREFIX."%playerさんがお菓子をもらいました！";
+    public const EXCEPTION = Message::PREFIX."コマンドの実行に失敗しました : %reason";
 
     /** @var string[] */
     public const RESULT_TRICK = [
