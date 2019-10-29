@@ -45,7 +45,7 @@ class APIInstance implements API{
     public function canUse(Player $player): bool{
         $name = strtolower($player->getName());
         if(empey($this->time[$name])){
-            rerurn true;
+            return true;
         }
         $now = time();
         if($now - $this->time[$name] < self::LIMIT_TIME * 60){
