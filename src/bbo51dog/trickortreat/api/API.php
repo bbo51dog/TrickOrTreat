@@ -10,5 +10,6 @@ interface API{
     public const TRICK = 0;
     public const TREAT = 1;
     
+    public function canUse(Player $player): bool;
     public function run(Player $player): int;
 }
