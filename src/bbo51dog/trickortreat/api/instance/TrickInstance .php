@@ -9,6 +9,35 @@ use bbo51dog\trickortreat\api\Trick;
 
 class TrickInstance implements Trick{
 
+    public function run(Player $player): void{
+        $num = rand(1, 6);
+        switch($num){
+            case 1:
+                $this->blindness($player);
+                break;
+            
+            case 2:
+                $this->hunger($player);
+                break;
+            
+            case 3:
+                $this->poison($player);
+                break;
+            
+            case 4:
+                $this->slowness($player);
+                break;
+            
+            case 5:
+                $this->nausea($player);
+                break;
+            
+            case 6:
+                $this->title($player);
+                break;
+        }
+    }
+    
     private function blindness(Player $player): void{
         $this->effect($player, Effect::BLINDNESS);
     }
