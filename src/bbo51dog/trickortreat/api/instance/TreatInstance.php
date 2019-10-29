@@ -2,6 +2,7 @@
 
 namespace bbo51dog\trickortreat\api\instance;
 
+use Exception;
 use pocketmine\item\Item;
 use pocketmine\item\ItemIds;
 use bbo51dog\trickortreat\api\Treat;
@@ -34,7 +35,7 @@ class TreatInstance implements Treat{
         $item = array_rand($this->item);
         $inv = $player->getInventory();
         if(!$inv->canAddItem($item)){
-            throw new \Exception('アイテムを追加できません');
+            throw new Exception('アイテムを追加できません');
         }
         $inv->addItem($item);
     }

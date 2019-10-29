@@ -2,6 +2,7 @@
 
 namespace bbo51dog\trickortreat;
 
+use Exception;
 use pocketmine\Player;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -31,7 +32,7 @@ class HalloweenCommand extends Command{
             $messages = Message::RESULT_TREAT;
             $broadcast = Message::RESULT_TREAT_BROADCAST;
         }else{
-            throw new \Exception('$resultの値が不正です');
+            throw new Exception('$resultの値が不正です');
         }
         $sender->sendMessage(array_rand($messages));
         Server::getInstance()->broadcastMessage(str_replace("%player", $sender->getName(), $broadcast));

@@ -2,6 +2,7 @@
 
 namespace bbo51dog\trickortreat\api\instance;
 
+use Exception;
 use pocketmine\Player;
 use bbo51dog\trickortreat\api\API;
 use bbo51dog\trickortreat\api\Trick;
@@ -27,7 +28,7 @@ class APIInstance implements API{
         }elseif($num === 1){
             return static::TREAT;
         }else{
-            throw new \Exception('$numの値が不正です');
+            throw new Exception('$numの値が不正です');
         }
     }
 
@@ -38,7 +39,7 @@ class APIInstance implements API{
         }elseif($id === static::TREAT){
             $this->treat->run($player);
         }else{
-            throw new \Exception('$idの値が不正です');
+            throw new Exception('$idの値が不正です');
         }
         return $id;
     }
