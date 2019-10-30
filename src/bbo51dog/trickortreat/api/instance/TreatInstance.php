@@ -3,6 +3,7 @@
 namespace bbo51dog\trickortreat\api\instance;
 
 use Exception;
+use pocketmine\Player;
 use pocketmine\item\Item;
 use pocketmine\item\ItemIds;
 use bbo51dog\trickortreat\api\Treat;

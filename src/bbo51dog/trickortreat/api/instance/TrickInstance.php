@@ -2,6 +2,7 @@
 
 namespace bbo51dog\trickortreat\api\instance;
 
+use pocketmine\Player;
 use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
 use pocketmine\level\Position;
