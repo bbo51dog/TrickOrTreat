@@ -4,6 +4,7 @@ namespace bbo51dog\trickortreat;
 
 use Exception;
 use pocketmine\Player;
+use pocketmine\Server;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use bbo51dog\trickortreat\api\API;
@@ -45,7 +46,7 @@ class HalloweenCommand extends Command{
             $sender->sendMessage(str_replace("%reason", $e->getMessage(), Message::EXCEPTION));
             return;
         }
-        $sender->sendMessage(array_rand($messages));
+        $sender->sendMessage($messages[array_rand($messages)]);
         Server::getInstance()->broadcastMessage(str_replace("%player", $sender->getName(), $broadcast));
     }
 }

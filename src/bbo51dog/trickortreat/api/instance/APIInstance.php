@@ -44,7 +44,7 @@ class APIInstance implements API{
 
     public function canUse(Player $player): bool{
         $name = strtolower($player->getName());
-        if(empey($this->time[$name])){
+        if(empty($this->time[$name])){
             return true;
         }
         $now = time();
@@ -57,7 +57,7 @@ class APIInstance implements API{
     public function run(Player $player): int{
         $id = $this->select();
         if(!$this->canUse($player)){
-            throw new Exception(self::LINIT_TIME.'分に一回使用できます');
+            throw new Exception(self::LIMIT_TIME.'分に一回使用できます');
         }
         if($id === static::TRICK){
             $this->trick->run($player);
