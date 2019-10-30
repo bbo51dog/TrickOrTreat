@@ -21,6 +21,6 @@ class Message{
     public const RESULT_TREAT = [
         Message::PREFIX."お…お菓子あげちゃうんだからねっ！//",
         Message::PREFIX."特別にお菓子をくれてやる、大事に食えよ",
-        Message::PREFIX、をお菓子って美味しいよね！たくさん食べちゃう！",
+        Message::PREFIX."をお菓子って美味しいよね！たくさん食べちゃう！",
     ];
 }
